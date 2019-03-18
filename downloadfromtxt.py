@@ -3,7 +3,7 @@
 
 '''
 Download Urls From Txt File
-(c) Benan Cetin - becetin AT gmail.com 
+(c) Benan Cetin
 18.03.2019
 
 NOTICE: You need to set the correct permissions to the folder before uploading.
