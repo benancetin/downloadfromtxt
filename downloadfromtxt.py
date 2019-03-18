@@ -14,11 +14,12 @@ import requests
 import shutil
 import datetime
 
-
+# File name that keeps urls to download
 fileName= 'myfile.txt'
+# The file to write logs.
 fileLog = 'log.txt'
+# Where the files will be downloaded.
 downDir = 'images/'
-
 i = 0
 log = 'Number of downloaded file :'
 if os.path.exists(fileName):
