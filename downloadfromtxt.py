@@ -19,7 +19,7 @@ downDir = 'images/'
 # check if the file exists.
 if os.path.exists(fileName):
 	print("File exist :"+fileName)
-	print("Reading and Uploading")
+	print("Reading and Downloading")
 	file = open(fileName, "r")
 	for line in file:
 			line = line.strip()
