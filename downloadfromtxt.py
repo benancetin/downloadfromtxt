@@ -14,7 +14,7 @@ import requests
 import shutil
 import datetime
 
-# File name that keeps urls to download
+# File name that keeps urls to download.
 fileName= 'myfile.txt'
 # The file to write logs.
 fileLog = 'log.txt'
