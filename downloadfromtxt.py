@@ -12,11 +12,15 @@ NOTICE: You need to set the correct permissions to the folder before downloading
 import os
 import requests
 import shutil
+import datetime
+
 
 fileName= 'myfile.txt'
+fileLog = 'log.txt'
 downDir = 'images/'
 
-# check if the file exists.
+i = 0
+log = 'Number of downloaded file :'
 if os.path.exists(fileName):
 	print("File exist :"+fileName)
 	print("Reading and Downloading")
@@ -26,5 +30,12 @@ if os.path.exists(fileName):
 			req = requests.get(line,allow_redirects=False)
 			open(line.split("/")[-1],'wb').write(req.content)
 			shutil.move(line.split("/")[-1], downDir)
+			i += 1
 else:
 	print("File does not exist :"+fileName);
+	log = 'File does not exist. Downloaded :'
+f = open(fileLog, "a")
+time = datetime.datetime.now()
+log = time.strftime("%Y-%m-%d %H:%M")+" "+fileName+": "+log+" "+str(i)+"\n"
+print(log)
+f.write(log)
